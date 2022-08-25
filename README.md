@@ -11,6 +11,7 @@ Front-end challenge from [Frontendmentor.io](https://www.frontendmentor.io/chall
 ![Design preview for the Order summary card coding challenge](./sketch//desktop-preview.jpg)
 
 ### Mobile
+![Design preview for the Order summary card coding challenge mobile](./sketch//mobile-design.jpg)
 
 ---
 ## 🔧 Structure and tools
