@@ -1,5 +1,6 @@
 import heroImg from "../assets/illustration-hero.svg";
 import planImg from "../assets/icon-music.svg";
+import "./summarybox.scss";
 
 type PropsType = {
     title: string,
