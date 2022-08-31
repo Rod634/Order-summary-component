@@ -7,6 +7,10 @@
 
 Front-end challenge from [Frontendmentor.io](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) In this challenge we must have to create a order summary component responsive each contains a title, description and some buttons :)
 
+I'm using vite to get a clean enviroment to develop :)
+
+Level: ⭐
+
 ### Desktop
 ![Design preview for the Order summary card coding challenge](./sketch//desktop-preview.jpg)
 
