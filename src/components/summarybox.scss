@@ -19,11 +19,13 @@ $DesaturatedBlue: hsl(224, 23%, 55%);
 $DarkBlue: hsl(223, 47%, 23%);
 
 // mixin margin to box_info
-@mixin box_margin {
-    margin-bottom: 7%;
-}
+$patternMarginBox: 7%;
 
-body{
+//font size responsive
+$fontSize: 0.9rem;
+
+
+body {
     background: url("../assets/pattern-background-desktop.svg") no-repeat $paleBlue;
     background-size: 100vw;
     min-height: 100vh;
@@ -31,65 +33,121 @@ body{
     place-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @media (max-width: 700px) {
+        background: url("../assets/pattern-background-mobile.svg") no-repeat $paleBlue;
+        background-size: 100vw;
+    }
 }
 
-.box{
+.box {
     background-color: white;
     text-align: center;
     width: 25vw;
     height: 72vh;
     border-radius: 20px;
-    
-    .img_box img{
+
+    .img_box img {
         border-radius: 20px 20px 0px 0px;
         width: 100%;
     }
+
+    @media (max-width: 360px) {
+        height: 75vh;
+    }
+
+    @media (max-width: 420px) {
+        width: 90vw;
+    }
+
+    @media (min-width: 420px) and (max-width: 800px)  {
+        width: 60vw;
+        height: 80vh;
+    }
+
+    @media (min-width: 800px) and (max-width: 1240px) {
+        width: 40vw;
+        height: 78vh;
+    }
+
+    @media (min-width: 1240px) and (max-width: 1600px) {
+        width: 28vw;
+        height: 90vh;
+    }
 }
 
-.box_info{
+.box_info {
     padding-top: 7%;
     width: 70%;
     display: block;
     margin: auto;
 
-    h2{
+    h2 {
         color: $DarkBlue;
         font-weight: 900;
-        @include box_margin();
+        margin-bottom: $patternMarginBox;
     }
-    p{
+
+    p {
         color: $DesaturatedBlue;
-        @include box_margin();
+        margin-bottom: $patternMarginBox;
+    }
+
+    @media (max-width: 800px) {
+        width: 85%;
+    }
+
+    @media (min-width: 800px) {
+        width: 80%;
     }
 }
 
-.plan{
+.plan {
     display: flex;
     background-color: $VeryPaleBlue;
     padding: 20px;
-    @include box_margin();
+    margin-bottom: $patternMarginBox;
     border-radius: 20px;
 
-    a{
-        margin: 7% 0% 0% 25%;
+    a {
+        position: relative;
+        margin-left: 20%;
+        margin-top: 5%;
+        font-weight: 900;
+
+        @media (max-width: 390px) {
+            margin-left: 15%;
+            font-size: $fontSize;
+        }
     }
+
 }
 
-.plan_info{
+.plan_info {
     text-align: left;
     margin-left: 7%;
-    h3{
+    margin-top: 2%;
+
+    h3 {
         font-size: 1rem;
+
+        @media (max-width: 390px) {
+            font-size: $fontSize;
+        }
+    }
+
+    @media (max-width: 390px) {
+        font-size: $fontSize;
     }
 }
 
-.button_display{
+.button_display {
     display: inline-grid;
     width: 100%;
     height: 20vh;
     margin-top: 4%;
 
-    button{
+    button {
         color: white;
         font-weight: 700;
         font-size: medium;
@@ -102,7 +160,7 @@ body{
         cursor: pointer;
     }
 
-    a{
+    a {
         color: $DesaturatedBlue;
         text-decoration: none;
         font-weight: 900;

@@ -23,7 +23,7 @@ Level: ⭐
 
  - React js
  - Typescript
- - css
+ - Sass
 ---
 ## 🌏 How to download and run this the project
 <br>
